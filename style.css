@@ -1000,6 +1000,12 @@ h3 {
   }
 }
 
+@media (max-width: 520px) {
+  .logo-text {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
