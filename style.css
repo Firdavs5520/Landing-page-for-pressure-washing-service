@@ -1000,7 +1000,7 @@ h3 {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1040px) {
   .logo-text {
     display: none;
   }
