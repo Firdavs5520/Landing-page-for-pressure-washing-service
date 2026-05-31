@@ -40,6 +40,14 @@ internalLinks.forEach((link) => {
   });
 });
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMenu();
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 900) closeMenu();
+});
+
 const revealItems = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
