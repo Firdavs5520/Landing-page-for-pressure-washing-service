@@ -70,7 +70,7 @@ svg {
   min-height: 64px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
 }
 
@@ -97,6 +97,10 @@ svg {
   box-shadow: 0 10px 24px rgba(8, 120, 184, 0.24);
 }
 
+.logo-text {
+  white-space: nowrap;
+}
+
 .menu-toggle {
   flex: 0 0 auto;
   width: 42px;
@@ -110,6 +114,45 @@ svg {
   border-radius: 8px;
   background: var(--surface);
   cursor: pointer;
+}
+
+.language-switcher {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  padding: 4px;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.language-btn {
+  min-width: 34px;
+  min-height: 32px;
+  padding: 0 7px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-btn:hover,
+.language-btn:focus-visible {
+  color: var(--blue);
+  background: var(--surface-soft);
+}
+
+.language-btn.is-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--aqua));
+  box-shadow: 0 8px 18px rgba(8, 120, 184, 0.18);
 }
 
 .menu-toggle span {
@@ -753,11 +796,16 @@ h3 {
     display: none;
   }
 
+  .language-switcher {
+    margin-left: auto;
+  }
+
   .nav-links {
     position: static;
     max-height: none;
     overflow: visible;
     display: flex;
+    margin-left: 0;
     flex-direction: row;
     align-items: center;
     gap: 4px;
@@ -910,6 +958,19 @@ h3 {
   .logo-mark {
     width: 34px;
     height: 34px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .language-switcher {
+    margin-left: auto;
+  }
+
+  .language-btn {
+    min-width: 32px;
+    padding-inline: 6px;
   }
 
   h1 {
